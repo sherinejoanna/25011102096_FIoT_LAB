@@ -19,7 +19,7 @@ Reuse the CAT 12 wiring. CAT 13B also drives `LD2` on `PA5`. The MQTT endpoint i
 ![Circuit Diagram](circuit.png)
 
 
-![Data flow](dataflow.svg)
+[View the data flow diagram](dataflow.svg)
 
 ### 2. Core Logic / Pseudocode / Code Base
 
@@ -88,7 +88,7 @@ Reuse the CAT 12 wiring. CAT 13B also drives `LD2` on `PA5`. The MQTT endpoint i
 ![Circuit Diagram](circuit.png)
 
 
-![Data flow](dataflow.svg)
+[View the data flow diagram](dataflow.svg)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

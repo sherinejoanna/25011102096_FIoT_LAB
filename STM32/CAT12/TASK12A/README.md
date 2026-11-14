@@ -24,7 +24,7 @@
 ![Circuit Diagram](circuit.png)
 
 
-![Data flow](dataflow.svg)
+[View the data flow diagram](dataflow.svg)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

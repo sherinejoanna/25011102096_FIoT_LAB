@@ -28,7 +28,7 @@ Set `USART1` and `USART2` to **115200-8-N-1**. The firmware reads the Wi-Fi sett
 ![Circuit Diagram](circuit.png)
 
 
-![Data flow](dataflow.svg)
+[View the data flow diagram](dataflow.svg)
 
 ### 2. Core Logic / Pseudocode / Code Base
 

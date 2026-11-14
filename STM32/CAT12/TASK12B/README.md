@@ -24,7 +24,7 @@
 ![Circuit Diagram](circuit.png)
 
 
-![Data flow](dataflow.svg)
+[View the data flow diagram](dataflow.svg)
 
 ### 2. Core Logic / Pseudocode / Code Base
 
@@ -82,7 +82,7 @@ The STM32 returns fresh BME280 readings as JSON over Wi-Fi using an HTTP/1.1 res
 ![Circuit Diagram](circuit.png)
 
 
-![Data flow](dataflow.svg)
+[View the data flow diagram](dataflow.svg)
 
 ### 2. Core Logic / Pseudocode / Code Base
 
