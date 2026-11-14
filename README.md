@@ -1,11 +1,11 @@
-# 25011102099_FIoT_LAB — 8051 & STM32 Embedded Systems and IoT Laboratory
+# 25011102096_FIoT_LAB — 8051 & STM32 Embedded Systems and IoT Laboratory
 
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 
 This repository contains the lab work for **25CS2741 Fundamentals of Internet of Things + Lab**, part of Semester 3 of the B.Tech CSE (IoT) program at Shiv Nadar University Chennai.
 
 - **Student Name:** Subithrasri Karthikeyan
-- **Register Number:** 25011102099
+- **Register Number:** 25011102096
 
 The exercises begin with register-level C on the **8051** and move to **STM32** projects configured with STM32CubeMX and built with HAL. The final projects use I²C to read a **BME280** environmental sensor and an **ESP8266** to send the readings over Wi-Fi. They first expose telemetry through **HTTP/JSON**, then use **MQTT** publishing and subscriptions with **Node-RED** dashboards.
 
