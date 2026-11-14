@@ -1,6 +1,6 @@
 # EXPERIMENT DETAILS
 
-**EXP:** CONTINUOUS ASSESSMENT 13
+**EXP:** CONTINUOUS ASSESSMENT 14
 
 **DATE:** 27/10/2026
 
@@ -10,7 +10,7 @@
 
 ---
 
-## TASK 13C : BME280 JSON Telemetry over MQTT & Node-RED Dashboard
+## TASK 14 — BME280 Data Publishing over MQTT (ESPLib)
 
 ### 1. Circuit Diagram
 

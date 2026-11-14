@@ -30,7 +30,9 @@ The exercises begin with register-level C on the **8051** and move to **STM32** 
 | 10 | ESP8266 AT command interface, Wi-Fi station connection (Tasks 9A–9C), HTTP web server (Tasks 10C/10d) | Blue Pill F103C8 + Wemos | dual UART bridging, AT command framing, `+IPD`, `CIPSEND` | [TASK10A](STM32/CAT10/TASK10A/), [TASK10B](STM32/CAT10/TASK10B/), [TASK10C](STM32/CAT10/TASK10C/), [TASK10D](STM32/CAT10/TASK10D/) |
 | 11 | Cortex-M4 GPIO output, system clock verification, multi-tier button press classification | NUCLEO-F401RE | HSE bypass clock input, 84 MHz PLL configuration | [TASK11A](STM32/CAT11/TASK11A/), [TASK11B](STM32/CAT11/TASK11B/), [TASK11C](STM32/CAT11/TASK11C/) |
 | 12 | BME280 I²C sensor integration, HTTP JSON endpoint, Node-RED statistical analysis | NUCLEO-F401RE | I²C register access, Bosch compensation API, JSON formatting, `Content-Length` | [TASK12A](STM32/CAT12/TASK12A/), [TASK12B](STM32/CAT12/TASK12B/) |
-| 13 | BME280 telemetry over MQTT and live Node-RED dashboard | NUCLEO-F401RE | MQTT `CONNECT` / `PUBLISH` / `SUBSCRIBE` packet handling | [TASK13A](STM32/CAT13/TASK13A/), [TASK13B](STM32/CAT13/TASK13B/), [TASK13C](STM32/CAT13/TASK13C/) |
+| 13 | MQTT publish test and LED control | NUCLEO-F401RE | MQTT `CONNECT`, `PUBLISH`, and `SUBSCRIBE` | [TASK13A](STM32/CAT13/TASK13A/), [TASK13B](STM32/CAT13/TASK13B/) |
+| 14 | BME280 data publishing over MQTT with ESPLib | NUCLEO-F401RE | JSON telemetry and a Node-RED dashboard | [TASK14](STM32/CAT14/TASK14/) |
+| 15 | Smart indoor environment monitoring | NUCLEO-F401RE | BME280 measurements and MQTT publishing | [TASK15](STM32/CAT15/TASK15/) |
 
 ## Circuit Diagrams
 
@@ -79,7 +81,7 @@ The exercises begin with register-level C on the **8051** and move to **STM32** 
 
 [![CAT 12 circuit diagram](STM32/CAT12/TASK12A/circuit.png)](STM32/CAT12/)
 
-### CAT 13 — BME280 MQTT NodeRED
+### CAT 13 — MQTT Publishing and LED Control
 
 [![CAT 13 circuit diagram](STM32/CAT13/TASK13A/circuit.png)](STM32/CAT13/)
 
@@ -91,7 +93,7 @@ flowchart LR
     MCU -- "UART1 115200<br/>AT commands" --> ESP["ESP8266<br/>Wemos D1 mini"]
     MCU -. "UART6 debug" .-> PC["PuTTY"]
     ESP -- "Wi-Fi / TCP :80<br/>HTTP GET → JSON (CAT 12)" --> HTTP["Browser /<br/>Node-RED http request"]
-    ESP -- "Wi-Fi / TCP :1883<br/>MQTT PUBLISH (CAT 13)" --> BROKER["MQTT broker<br/>broker.emqx.io"]
+    ESP -- "Wi-Fi / TCP :1883<br/>MQTT PUBLISH (CAT 14)" --> BROKER["MQTT broker<br/>broker.emqx.io"]
     BROKER -- "mqtt in" --> NR["Node-RED<br/>gauges, chart,<br/>min / max / avg"]
     NR -- "mqtt out: ON / OFF / TOGGLE" --> BROKER
 ```

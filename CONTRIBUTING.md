@@ -20,9 +20,9 @@ Because STM32CubeIDE compiles source files directly from each project's `Core/` 
 
 | Canonical Master Directory | Project Directories to Synchronise |
 |---|---|
-| `Common_Libraries/ESPLib_MQTT/` (`ESPLib.*`, `mqtt_packet.*`) | `STM32/CAT13/TASK13A`, `TASK13B`, `TASK13C` (`Core/Src` + `Core/Inc`) |
+| `Common_Libraries/ESPLib_MQTT/` (`ESPLib.*`, `mqtt_packet.*`) | `STM32/CAT13/TASK13A`, `TASK13B`, `STM32/CAT14/TASK14` (`Core/Src` + `Core/Inc`) |
 | `Common_Libraries/ESP8266_AT_Driver/` (`esp_at.*`) | `STM32/CAT10/TASK10D`, `STM32/CAT12/TASK12B` |
-| `Common_Libraries/BME280_Bosch_API/` | `STM32/CAT12/TASK12A`, `TASK12B`, `STM32/CAT13/TASK13C` |
+| `Common_Libraries/BME280_Bosch_API/` | `STM32/CAT12/TASK12A`, `TASK12B`, `STM32/CAT14/TASK14` |
 | `Common_Libraries/Helpers/` (`wifi_config.h`, `fmt_fixed.h`) | All Wi-Fi and BME280 projects listed above |
 | 8051 `delay.c/.h`, `lcd.c/.h` | Respective 8051 task folders |
 
@@ -30,7 +30,7 @@ Recommended workflow: edit the master file in `Common_Libraries/` → run `make 
 
 ```bash
 L=Common_Libraries/ESPLib_MQTT
-for p in STM32/CAT13/TASK13*/; do cp $L/*.c "$p/Core/Src/"; cp $L/*.h "$p/Core/Inc/"; done
+for p in STM32/CAT13/TASK13*/ STM32/CAT14/TASK14/; do cp $L/*.c "$p/Core/Src/"; cp $L/*.h "$p/Core/Inc/"; done
 ```
 
 ## Updating 8051 HEX Binaries
